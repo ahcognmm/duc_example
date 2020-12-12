@@ -1,6 +1,6 @@
 //import libraries
 import React from 'react';
-import { View, Text, StyleSheet, Image } from 'react-native';
+import { View, Text, StyleSheet, Image, TextInput } from 'react-native';
 import SubCmt from './SubComment';
 
 // create a component
