@@ -8,10 +8,12 @@
 
 import React from 'react';
 import Home from './src/screens/Home';
+import Comment from './src/screens/Comment';
 
 const App = () => {
   return (
-    <Home />
+    // <Home />
+    <Comment />
   );
 };
 export default App;

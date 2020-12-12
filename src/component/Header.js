@@ -9,7 +9,7 @@ const Header = ({ title }) => {
     return (
         <View style={styles.container}>
             <View style={styles.centerItem}>
-                <Icon.Button
+                <Icon
                     name="arrow-back"
                     color="black"
                     backgroundColor="#FFF"
