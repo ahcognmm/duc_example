@@ -1,7 +1,8 @@
 //import libraries
 import React from 'react';
-import { View, Text, StyleSheet, Image, TextInput } from 'react-native';
+import { View, Text, StyleSheet, Image, TextInput, TouchableOpacity } from 'react-native';
 import SubCmt from './SubComment';
+import * as navigation from '../../RootNavigation';
 
 // create a component
 const CommentItem = () => {
@@ -10,7 +11,7 @@ const CommentItem = () => {
             <View style={{ flexDirection: "column", height: "100%" }}>
                 <Avatar style={{}} urlImage="https://picsum.photos/200" />
             </View>
-            <CmtBox />
+            <CmtBox navigation={navigation} />
         </View>
     );
 };
@@ -26,13 +27,17 @@ const Avatar = ({ urlImage }) => {
     )
 }
 
-const CmtBox = () => {
+const CmtBox = ({ navigation }) => {
     return (
         <View style={{ marginLeft: 15 }}>
-            <View style={styles.cmtBox}>
+            <TouchableOpacity
+                onLongPress={() => {
+                    navigation.navigate("Reaction")
+                }}
+                style={styles.cmtBox}>
                 <Text style={styles.user}>Dat Mai</Text>
                 <Text style={styles.cmt}>Pho bo nhe cac ban</Text>
-            </View>
+            </TouchableOpacity>
             <View style={styles.underBox}>
                 <Text style={styles.textUnderBox}>1 giờ</Text>
                 <Text style={styles.textUnderBox}>Thích</Text>
